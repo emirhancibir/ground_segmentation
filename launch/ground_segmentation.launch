@@ -1,0 +1,15 @@
+<launch>
+  <node name="ground_segmentation_node" pkg="ground_segmentation" type="ground_segmentation_node" output="screen">
+
+    <!-- Parametreler -->
+    <param name="distance_threshold" value="0.05" />
+    <param name="z_threshold" value="0.3" />
+    <param name="normal_angle_threshold" value="0.9" />
+
+    <!-- Topic parametreleri -->
+    <param name="input_topic" value="/cloud_all_fields_fullframe" />
+    <param name="ground_topic" value="/ground_points" />
+    <param name="nonground_topic" value="/nonground_points" />
+
+  </node>
+</launch>
